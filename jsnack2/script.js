@@ -8,9 +8,9 @@
 // //Creiamo una copia dell’array di partenza e aggiungiamo ai singoli elementi (quindi ogni oggetto del nuovo array)
 // una nuova proprietà position che contiene una lettera casuale. non dobbiamo modificare l’array iniziale
 
-var letter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const letter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-var arrayObj = [
+const arrayObj = [
   { name: 'Poppy', type: 'tshirt', color: 'red' },
   { name: 'Jumping', type: 'occhiali', color: 'blue' },
   { name: 'CrissCross', type: 'scarpe', color: 'black' },
@@ -19,13 +19,13 @@ var arrayObj = [
 console.log(arrayObj);
 
 // copio array
-var arrayObjTwo = arrayObj.map((element, index) => {
+const arrayObjTwo = arrayObj.map((element, index) => {
   let obj = { ...element }
   return obj;
 });
 
 // cliclo arrayObjTwo
-arrayObjTwo.forEach((element, index, array) => {
+arrayObjTwo.forEach((element) => {
   element.position = randomLetter();
 });
 
